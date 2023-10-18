@@ -17,7 +17,7 @@ public class Driver {
 			ResultSet sqlResult = statement.executeQuery(retrieveQuery);//creates query
 			
 			while((sqlResult!=null) && (sqlResult.next())) { //output
-				if(sqlResult.getString(1).equals("Mitsubishi")) {
+				if("Mitsubishi".equals(sqlResult.getString(1))) {
 					System.out.println("Model: " + sqlResult.getString(2) + "\tType: " + sqlResult.getString(3) + "\tColor: " + sqlResult.getString(5));
 				}
 			}
@@ -29,7 +29,7 @@ public class Driver {
 			sqlResult = statement.executeQuery(retrieveQuery);//creates query
 			
 			while((sqlResult!=null) && (sqlResult.next())) { //output
-				if(sqlResult.getString(1).equals("Mitsubishi")) {
+				if("Mitsubishi".equals(sqlResult.getString(1))) {
 					System.out.println("Model: " + sqlResult.getString(2) + "\tType: " + sqlResult.getString(3) + "\tColor: " + sqlResult.getString(4));
 				}
 			}
